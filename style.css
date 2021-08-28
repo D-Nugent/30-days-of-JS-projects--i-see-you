@@ -1,0 +1,137 @@
+/* HTML Reset */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html {
+  height: 100vh;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  height: 100%;
+  max-height: 100vh;
+  background-color: #070b0c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+*,*::before,*::after {
+  box-sizing: inherit;
+}
+
+/* Root Styling */
+:root {
+  --left-eye-x: 26%;
+  --left-eye-y: 28%;
+  --right-eye-x: 54%;
+  --right-eye-y: 28.3%;
+}
+
+
+/* Top Level Styling */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  /* margin-bottom: 4%; */
+}
+
+.primary-heading {
+  color: whitesmoke;
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 3rem;
+}
+
+.secondary-heading {
+  color: whitesmoke;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60%;
+}
+
+/* Header Styling */
+
+.hero__link {
+  text-decoration: none;
+  color: teal;
+}
+
+.hero__link:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  position: absolute;
+  top: 5vmin;
+  left: 5vmin;
+  color: teal;
+  margin: 0;
+}
+
+/* Image styling */
+
+.hero-image__container{
+  /* background-color: red; */
+  position: relative;
+  height: 100%;
+}
+
+.hero-image__surprised-base{
+  /* object-fit: contain; */
+  height: 100%;
+}
+
+.hero-image__left-eye{
+  position: absolute;
+  width: 18%;
+  top: var(--left-eye-y);
+  left: var(--left-eye-x);
+  /* right: 56%; */
+  z-index: -1;
+}
+
+.hero-image__right-eye{
+  position: absolute;
+  width: 18%;
+  top: var(--right-eye-y);
+  left: var(--right-eye-x);
+  z-index: -1;
+}
+
+/* Footer Styling */
+
+.sign-off{
+  background-color: teal;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 9vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-off__msg{
+  text-align: center;
+}
